@@ -31,7 +31,7 @@ const Cpu = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center items-center">
         <AnimatePresence>
           {isOpen && <Modal ref={dialogRef} setIsOpen={setIsOpen} />}
         </AnimatePresence>
