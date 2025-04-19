@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { GESTURES } from "../constants/gestures";
 import Button from "../ui/Button";
 import Gesture from "../ui/Gesture";
-import { gameActions } from "../store";
+import { gameActions } from "../store/game";
 import CpuGesture from "./CpuGesture";
 
 const Round = ({ move }) => {

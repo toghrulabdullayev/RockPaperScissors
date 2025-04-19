@@ -5,19 +5,23 @@
 
 // import { fetchOnlineStatus } from "../util/http";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { fetchRefreshToken } from "../util/http";
 
 const Online = () => {
-  const [isAuth, setIsAuth] = useState(false);
-  const navigate = useNavigate();
+  const { token } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    if (!isAuth) {
-      navigate("/auth/login");
-    }
-  }, [isAuth, navigate]);
+    const fechfech = async () => {
+      const tok = await fetchRefreshToken();
+      console.log(tok);
+    };
 
-  return <h1>online</h1>;
+    fechfech();
+  }, []);
+
+  return <h1>{token}</h1>;
 };
 
 export default Online;

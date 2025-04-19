@@ -26,3 +26,11 @@ export const WINS = {
   lizard: ["spock", "paper"],
   rock: ["lizard", "scissors"],
 };
+
+export const LOSES = {
+  scissors: ["spock", "rock"],
+  paper: ["lizard", "scissors"],
+  rock: ["paper", "spock"],
+  lizard: ["rock", "scissors"],
+  spock: ["paper", "lizard"],
+};

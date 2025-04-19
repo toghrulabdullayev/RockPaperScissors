@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { useDispatch } from "react-redux";
 
-import { GESTURES } from "../constants/gestures";
+import { GESTURES, /* LOSES */ } from "../constants/gestures";
 import Gesture from "../ui/Gesture";
-import { gameActions } from "../store";
+import { gameActions } from "../store/game";
 
 const CpuGesture = ({ move }) => {
   const cpuMoveTimer = useRef();
@@ -15,7 +15,13 @@ const CpuGesture = ({ move }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    //? Just random move
     const cpuMove = GESTURES[Math.floor(Math.random() * 5)];
+
+    //? Always lose
+    // const cpuMove = GESTURES.find(
+    //   (e) => e.move === LOSES[move][Math.floor(Math.random() * 2)]
+    // );
 
     cpuMoveTimer.current = setTimeout(() => {
       setCpuGesture(cpuMove);

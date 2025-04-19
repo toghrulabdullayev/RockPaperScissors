@@ -10,11 +10,11 @@ const CountAnimation = () => {
   const rounded = useTransform(() => Math.round(count.get()));
 
   useEffect(() => {
-    const controls = animate(count, score, { duration: 2 });
-    return () => {
-      controls.stop();
-      count.set(0);
-    };
+    animate(count, score, { duration: 2 });
+    // return () => {
+    //   controls.stop();
+    //   count.set(0);
+    // };
   }, [count, score]);
 
   return (

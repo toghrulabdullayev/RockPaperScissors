@@ -7,8 +7,8 @@ import ErrorPage from "./pages/Error";
 import HomePage from "./pages/Home";
 import CpuPage from "./pages/Cpu";
 import OnlinePage from "./pages/Online";
-import LoginPage from "./pages/Login";
-import SignupPage from "./pages/Signup";
+import LoginPage, { action as loginAction } from "./pages/Login";
+import SignupPage, { action as signupAction } from "./pages/Signup";
 import ResetPasswordPage from "./pages/ResetPassword";
 
 const queryClient = new QueryClient();
@@ -25,8 +25,8 @@ const routes = createBrowserRouter([
       {
         path: "auth",
         children: [
-          { path: "login", element: <LoginPage /> },
-          { path: "signup", element: <SignupPage /> },
+          { path: "login", element: <LoginPage />, action: loginAction },
+          { path: "signup", element: <SignupPage />, action: signupAction },
           { path: "reset", element: <ResetPasswordPage /> },
         ],
       },

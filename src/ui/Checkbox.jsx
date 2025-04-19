@@ -8,6 +8,7 @@ const CheckBox = () => {
   return (
     <div className="flex gap-2 self-start">
       <button
+        type="button"
         className={`flex items-center w-10 h-6 px-0.5 ${
           isOn ? "justify-end *:bg-white" : "justify-start *:bg-header-outline"
         } cursor-pointer bg-transparent border-2 border-header-outline rounded-full`}

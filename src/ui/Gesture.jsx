@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { useDispatch } from "react-redux";
 
-import { gameActions } from "../store";
+import { gameActions } from "../store/game";
 
 const Gesture = ({ move, img, styles, position, disabled }) => {
   const dispatch = useDispatch();

@@ -7,7 +7,7 @@ import Modal from "../components/Modal";
 import GameBoard from "../components/GameBoard";
 import Round from "../components/Round";
 import Button from "../ui/Button";
-import { gameActions } from "../store";
+import { gameActions } from "../store/game";
 
 const Cpu = () => {
   const dialogRef = useRef();
